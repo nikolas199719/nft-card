@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+  <body>
+    <div class="card">
+      <!-- Image -->
+      <div class="container-image">
+        <img
+          src="images/image-equilibrium.jpg"
+          alt="Equilibrium"
+          class="card-image"
+        />
+        <div class="bg-hover">
+          <img src="images/icon-view.svg" alt="eye" width="48" height="48" />
+        </div>
+      </div>
+
+      <!-- Data -->
+      <h1 class="card-title">Equilibrium #3429</h1>
+      <p class="card-description">
+        Our Equilibrium collection promotes balance and calm.
+      </p>
+
+      <!-- Caption -->
+      <div class="card-caption">
+        <span class="card-caption-money caption">
+          <img
+            style="margin-right: 6.48px"
+            src="images/icon-ethereum.svg"
+            alt="eth"
+            width="11"
+            height="16"
+          />
+          0.041 ETH
+        </span>
+        <span class="card-caption-last caption">
+          <img
+            style="margin-right: 7.69px"
+            src="images/icon-clock.svg"
+            alt="eth"
+            width="16"
+            height="16"
+          />
+          3 days left
+        </span>
+      </div>
+
+      <!-- Line -->
+      <div class="card-line"></div>
+
+      <!-- Author -->
+      <div class="card-author">
+        <img
+          class="card-author-avatar"
+          width="33"
+          height="33"
+          src="images/image-avatar.png"
+          alt="avatar"
+        />
+        <p>Creation of <a class="author-link" href="#">Jules Wyvern</a></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --softBlue: #8bacd9;
+  --veryDarkBlueBody: #0d192c;
+  --veryDarkBlueCard: #15263f;
+  --veryDarkBlueLine: #2e405a;
+  --cyan: #00fff8;
+  --white: #ffffff;
+  --headingFont: normal 600 1.375rem / 1.75rem Outfit;
+  --bodyFont: normal 300 1.125rem / 1.625rem Outfit;
+  --captionFont: normal 600 1rem / 1.25rem Outfit;
+}
+
+body {
+  background-color: var(--veryDarkBlueBody);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--bodyFont);
+  color: var(--softBlue);
+}
+
+.card {
+  height: 596px;
+  width: 354px;
+  background-color: var(--veryDarkBlueCard);
+  border-radius: 15px;
+  padding: 24px;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+}
+
+.container-image {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-image::after {
+  content: "";
+}
+
+.card-title {
+  font: var(--headingFont);
+  color: var(--white);
+  margin-top: 24px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.card-description {
+  margin-bottom: 24px;
+}
+
+.card-caption {
+  display: flex;
+  justify-content: space-between;
+  font: var(--captionFont);
+}
+
+.card-caption-money {
+  color: var(--cyan);
+}
+
+.card-line {
+  background-color: var(--veryDarkBlueLine);
+  height: 1px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.card-author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+}
+
+.card-author-avatar {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.author-link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.card-title:hover,
+.author-link:hover {
+  color: var(--cyan);
+}
+
+.bg-hover {
+  background-color: rgba(0, 255, 247, 0.5);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.1s ease-in;
+  cursor: pointer;
+}
+
+.container-image:hover .bg-hover {
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    height: min-content;
+    max-width: 327px;
+  }
+}
